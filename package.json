@@ -3,6 +3,7 @@
   "displayName": "PostgreSQL Syntax",
   "description": "Adds better syntax highlighting for PostgreSQL syntax",
   "version": "0.0.1",
+  "license": "MIT",
   "publisher": "felixfbecker",
   "icon": "images/logo.png",
   "repository": {
@@ -18,7 +19,9 @@
   "scripts": {
     "prettier": "prettier --write .",
     "lint": "eslint . --ext .yml",
-    "build": "js-yaml syntaxes/sql.yml > syntaxes/sql.json"
+    "build": "js-yaml syntaxes/sql.yml > syntaxes/sql.json",
+    "prepublish": "npm run build",
+    "publish": "vsce publish"
   },
   "contributes": {
     "languages": [
