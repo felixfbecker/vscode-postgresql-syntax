@@ -1,8 +1,8 @@
 {
   "name": "postgresql-syntax",
-  "displayName": "PostgreSQL Syntax",
+  "displayName": "Better PostgreSQL Syntax",
   "description": "Adds better syntax highlighting for PostgreSQL syntax",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "publisher": "felixfbecker",
   "icon": "images/logo.png",
