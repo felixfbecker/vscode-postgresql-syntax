@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc.json",
+  "extends": ["plugin:yml/standard"],
+  "rules": {
+    "yml/plain-scalar": ["error", "always"],
+    "yml/require-string-key": "off",
+    "yml/quotes": ["error", { "prefer": "single" }],
+    "yml/no-multiple-empty-lines": ["error", { "max": 0 }],
+    "yml/block-mapping": [
+      "error",
+      { "singleline": "always", "multiline": "always" }
+    ],
+    "yml/block-sequence": [
+      "error",
+      { "singleline": "always", "multiline": "always" }
+    ],
+    "yml/sort-keys": [
+      "error",
+
+      {
+        "pathPattern": ".*",
+        "hasProperties": ["match"],
+        "order": ["name", "match", "captures"]
+      }
+    ]
+  }
+}

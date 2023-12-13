@@ -1,0 +1,7 @@
+.vscode/**
+.vscode-test/**
+.gitignore
+test/**
+.prettierrc.json
+.eslintrc.json
+.gitattributes

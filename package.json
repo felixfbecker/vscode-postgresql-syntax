@@ -1,0 +1,57 @@
+{
+  "name": "postgresql-syntax",
+  "displayName": "PostgreSQL Syntax",
+  "description": "Adds better syntax highlighting for PostgreSQL syntax",
+  "version": "0.0.1",
+  "publisher": "felixfbecker",
+  "icon": "images/logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felixfbecker/vscode-postgresql-syntax"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "scripts": {
+    "prettier": "prettier --write .",
+    "lint": "eslint . --ext .yml",
+    "build": "js-yaml syntaxes/sql.yml > syntaxes/sql.json"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "sql",
+        "aliases": [
+          "PostgreSQL",
+          "sql"
+        ],
+        "extensions": [
+          ".sql"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "sql",
+        "scopeName": "source.sql",
+        "path": "./syntaxes/sql.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.javascript": "javascript"
+        }
+      }
+    ]
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^2.22.0",
+    "chokidar-cli": "^3.0.0",
+    "eslint": "^8.55.0",
+    "eslint-plugin-yml": "^1.10.0",
+    "js-yaml": "^4.1.0",
+    "nodemon": "^3.0.2",
+    "prettier": "^3.1.1"
+  }
+}
