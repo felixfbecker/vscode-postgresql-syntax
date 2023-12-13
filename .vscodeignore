@@ -5,3 +5,5 @@ test/**
 .prettierrc.json
 .eslintrc.json
 .gitattributes
+package-lock.json
+.git-blame-ignore-revs
